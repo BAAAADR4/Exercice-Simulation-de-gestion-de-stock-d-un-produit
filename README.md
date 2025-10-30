@@ -26,5 +26,51 @@ Question 2
 son rôle est d'imposer une condition
 Ce structure de condition est adapté à ce rôle car il va imposer deux  conditions , la première est si le stock est inférieur ou égal au seuil d’alerte, il affiche un message d’alerte
 et la deuxième est si le stock devient négatif, il affiche un message d’erreur.
--Pour le nombre de jour , quantité de produits reçue , quantité de produits vendue et le stock actuel on va utiliser la structure boucle 
-son rôle est de répéter la mm chose tous les jours sou s forme d'une boucle
+Question 3
+Algorithme :  Simulation de gestion de stock d’un produit
+Variables
+ le stock initial , le seuil d'alerte , jours doit durer la simulation , produits reçue , produits vendue , Le stock actuel , jour : entier
+ ERREUR , ATTENTION : chaine de caractères
+Début
+Affichier ("Quel est le stock initial ?")
+lire "le stock initial"
+affichier ("Quel est  le seuil d'alerte ?)
+lire "le seuil d'alert"
+affichier ("Combien de jours doit durer la simulation ?") 
+lire "le nombre de jours"
+
+si (le stock <= seuil d'alert )
+   affichier("ATTENTION : le stock est sous le seuil d'alerte !")
+else (le stock < 0)
+    affichier("ERREUR : le stock est négatif. Simulation arrêtée.")
+    
+affichier("Jour 1")
+affichier("------")
+affichier("Quantité de produits reçue ?")
+lire(Quantité de produits reçue)
+affichier("Quantité de produits vendue ?")
+lire(Quantité de produits vendue)
+affichier("Le stock actuel est de : ")
+lire(Le stock actuel)
+
+affichier("Jour 2")
+affichier("------")
+affichier("Quantité de produits reçue ?")
+lire(Quantité de produits reçue)
+affichier("Quantité de produits vendue ?")
+lire(Quantité de produits vendue)
+affichier("Le stock actuel est de : ")
+lire(Le stock actuel)
+
+affichier("Jour 3")
+affichier("------")
+affichier("Quantité de produits reçue ?")
+lire(Quantité de produits reçue)
+affichier("Quantité de produits vendue ?")
+lire(Quantité de produits vendue)
+affichier("Le stock actuel est de : ")
+lire(Le stock actuel)
+
+
+   
+
