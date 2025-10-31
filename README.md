@@ -18,9 +18,15 @@ son rôle est de donner un message d'erreur
 -on stocke (jour)
 type variable
 son rôle c'est de savoir le nombre de jour
--On stocke (Quel est le stock initial)
+-On stocke ( le stock initial )
 type variable
 son rôle est de savoir combien il ya dans le stock initial
+-On stocke (seuil d'alert)
+type variable
+son rôle c'est de donner le nombre minimal de produit qu'on doit préserver dans le stock
+-On stocke ( simulationEnCours )
+boolean
+son rôle est d'arreter le programme en cas de stock négatif
 Question 2
 -Pour le message d'erreur et attention on va utiliser la structure conditionnelle 
 son rôle est d'imposer une condition
@@ -31,45 +37,34 @@ Algorithme :  Simulation de gestion de stock d’un produit
 Variables
  le stock initial , le seuil d'alerte , jours doit durer la simulation , produits reçue , produits vendue , Le stock actuel , jour : entier
  ERREUR , ATTENTION : chaine de caractères
+ simulationEnCours : boolean
 Début
 Affichier ("Quel est le stock initial ?")
-lire "le stock initial"
+ lire "le stock initial"
 affichier ("Quel est  le seuil d'alerte ?)
-lire "le seuil d'alert"
+ lire "le seuil d'alert"
 affichier ("Combien de jours doit durer la simulation ?") 
-lire "le nombre de jours"
+ lire "le nombre de jours"
 
-si (le stock <= seuil d'alert )
+si (le stock initial <= seuil d'alert )
    affichier("ATTENTION : le stock est sous le seuil d'alerte !")
 else (le stock < 0)
     affichier("ERREUR : le stock est négatif. Simulation arrêtée.")
-    
-affichier("Jour 1")
-affichier("------")
-affichier("Quantité de produits reçue ?")
-lire(Quantité de produits reçue)
-affichier("Quantité de produits vendue ?")
-lire(Quantité de produits vendue)
-affichier("Le stock actuel est de : ")
-lire(Le stock actuel)
 
-affichier("Jour 2")
-affichier("------")
-affichier("Quantité de produits reçue ?")
-lire(Quantité de produits reçue)
-affichier("Quantité de produits vendue ?")
-lire(Quantité de produits vendue)
-affichier("Le stock actuel est de : ")
-lire(Le stock actuel)
+Jour <- 5
+Tant que jour <= 5
+ affichier ( "Jour" ) , jour
+ affichier ("------")    
+ affichier("Quantité de produits reçue ?")
+   lire(Quantité de produits reçue)
+ affichier("Quantité de produits vendue ?")
+   lire(Quantité de produits vendue)
+ affichier("Le stock actuel est de : ")
+   lire(Le stock actuel)
 
-affichier("Jour 3")
-affichier("------")
-affichier("Quantité de produits reçue ?")
-lire(Quantité de produits reçue)
-affichier("Quantité de produits vendue ?")
-lire(Quantité de produits vendue)
-affichier("Le stock actuel est de : ")
-lire(Le stock actuel)
+Le stock actuel <- le stock initial + produits reçue - produits vendue
+
+affichier( "Simulation terminée. Stock final", Le stock actuel )
 
 
    
